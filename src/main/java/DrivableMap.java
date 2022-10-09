@@ -30,9 +30,9 @@ class DrivableMap {
     public Boolean addDrivable(String ID, Drivable other){
         if (!(this.drivable_map.containsKey(ID))){
             this.drivable_map.put(ID, other);
-            return Boolean.TRUE;
+            return true;
         }
-        return Boolean.FALSE;
+        return false;
     }
 
 
@@ -46,10 +46,10 @@ class DrivableMap {
     public Boolean hasFasterThan(int speed){
         for (String key : this.drivable_map.keySet()) {
             if (this.drivable_map.get(key).getMaxSpeed() >= speed){
-                return Boolean.TRUE;
+                return true;
             }
         }
-        return Boolean.FALSE;
+        return false;
     }
 
 
